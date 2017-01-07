@@ -28,4 +28,4 @@ RUN npm install --production
 EXPOSE 8080
 
 # Startup
-ENTRYPOINT npm start
+CMD npm start

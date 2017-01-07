@@ -1,7 +1,7 @@
 {
   "name": "micro-loki-store",
   "description": "Mapping of shortcuts",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "license": "MIT",
   "author": {
     "name": "Geir Gåsodden",
@@ -21,7 +21,7 @@
     "standard-fix": "standard --fix",
     "start": "NODE_ENV=production micro -p 8080",
     "dev": "micro -p 3000",
-    "now-deploy": "npm test && now --npm && now alias"
+    "now-deploy": "npm test && now --docker && now alias"
   },
   "keywords": [
     "microservice",
