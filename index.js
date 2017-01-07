@@ -14,7 +14,7 @@ const options = {
 }
 
 let store
-const db = new Loki ('db/loki.db', options)
+const db = new Loki('db/loki.db', options)
 
 function loaded () {
   store = db.getCollection('store') || db.addCollection('store')
