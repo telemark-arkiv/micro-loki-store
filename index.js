@@ -6,8 +6,19 @@ const marked = require('marked')
 const { parse } = require('url')
 const { json, send } = require('micro')
 
-const db = new Loki('db/loki.json')
-const store = db.addCollection('store')
+const options = {
+  autoload: true,
+  autosave: true,
+  autosaveInterval: 10000,
+  autoloadCallback: loaded
+}
+
+let store
+const db = new Loki ('db/loki.db', options)
+
+function loaded () {
+  store = db.getCollection('store') || db.addCollection('store')
+}
 
 function updateStore (data) {
   const key = data.key
