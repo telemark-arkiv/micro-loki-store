@@ -10,7 +10,7 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">=7.4.0"
+    "node": ">=7.5.0"
   },
   "scripts": {
     "test": "standard && nsp check && tap --reporter=spec test/**/*.js",
@@ -21,7 +21,7 @@
     "standard-fix": "standard --fix",
     "start": "NODE_ENV=production micro -p 8080",
     "dev": "micro -p 3000",
-    "now-deploy": "npm test && now --docker && now alias"
+    "now-deploy": "npm test && now --npm --alias"
   },
   "keywords": [
     "microservice",
@@ -32,25 +32,26 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/telemark/micro-loki-store.git"
+    "url": "https://github.com/telemark/micro-loki-store.git"
   },
   "bugs": {
-    "url": "http://github.com/telemark/micro-loki-store/issues"
+    "url": "https://github.com/telemark/micro-loki-store/issues"
   },
   "now": {
-    "alias": "store.micro.tfk.allthethings.win"
-  },
-  "greenkeeper": {
-    "emails": false
+    "aliases": [
+      "store.micro.tfk.allthethings.win"
+    ],
+    "env": {
+      "NODE_ENV": "production"
+    }
   },
   "devDependencies": {
     "coveralls": "2.11.15",
     "nsp": "2.6.2",
     "standard": "8.6.0",
-    "tap": "9.0.3"
+    "tap": "10.0.1"
   },
   "dependencies": {
-    "is-file": "1.0.0",
     "lokijs": "1.4.2",
     "marked": "0.3.6",
     "micro": "6.2.1"
