@@ -16,7 +16,7 @@ Read from or write to store
 Returns values from a key
 
 ```bash
-?key=<key>
+$ curl -v http://localhost:3000/store?key=info
 ```
 
 #### POST
