@@ -1,7 +1,7 @@
 {
   "name": "micro-loki-store",
   "description": "Mapping of shortcuts",
-  "version": "1.1.4",
+  "version": "2.0.0",
   "license": "MIT",
   "author": {
     "name": "Geir Gåsodden",
@@ -39,7 +39,7 @@
   },
   "now": {
     "aliases": [
-      "store.micro.tfk.allthethings.win"
+      "loki.storage.mikrotjeneste.no"
     ],
     "env": {
       "NODE_ENV": "production"

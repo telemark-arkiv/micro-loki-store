@@ -7,8 +7,6 @@ Microservice for storing content with loki
 
 ## API
 
-### **/store**
-
 Read from or write to store
 
 #### GET
@@ -16,7 +14,7 @@ Read from or write to store
 Returns values from a key
 
 ```bash
-$ curl -v http://localhost:3000/store?key=info
+$ curl -v http://localhost:3000/{key}
 ```
 
 #### POST
@@ -38,7 +36,7 @@ Required input: key, type and data
 ```
 
 ```bash
-$ curl -d '{"key":"info", "type":"content", "data":{"user": "gasg", "type": "news", "list": ["aws"]}}' -v http://localhost:3000/store
+$ curl -d '{"key":"info", "type":"content", "data":{"user": "gasg", "type": "news", "list": ["aws"]}}' -v http://localhost:3000
 ```
 
 ## Code

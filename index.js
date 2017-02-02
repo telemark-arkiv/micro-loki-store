@@ -1,5 +1,6 @@
 'use strict'
 
+const os = require('os')
 const readFileSync = require('fs').readFileSync
 const Loki = require('lokijs')
 const marked = require('marked')
@@ -14,7 +15,7 @@ const options = {
 }
 
 let store
-const db = new Loki('tmp/loki.db', options)
+const db = new Loki(`${os.tmpdir()}/loki.db`, options)
 
 function loaded () {
   store = db.getCollection('store') || db.addCollection('store')
@@ -50,17 +51,17 @@ function readFromStore (data) {
 module.exports = async (request, response) => {
   const {pathname, query} = await parse(request.url, true)
   const method = request.method
-  const data = method === 'POST' ? await json(request) : query
+  let data = method === 'POST' ? await json(request) : query
 
-  if (pathname === '/store') {
+  if (method === 'POST') {
     response.setHeader('Access-Control-Allow-Origin', '*')
     response.setHeader('Access-Control-Allow-Methods', 'GET, POST')
-    send(response, 200, method === 'POST' ? updateStore(data) : readFromStore(data))
+    send(response, 200, updateStore(data))
   } else if (pathname !== '/') {
     data.key = pathname.replace('/', '')
     response.setHeader('Access-Control-Allow-Origin', '*')
     response.setHeader('Access-Control-Allow-Methods', 'GET, POST')
-    send(response, 200, method === 'POST' ? updateStore(data) : readFromStore(data))
+    send(response, 200, readFromStore(data))
   } else {
     const readme = readFileSync('./README.md', 'utf-8')
     const html = marked(readme)
