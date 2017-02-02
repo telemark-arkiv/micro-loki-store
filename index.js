@@ -56,6 +56,11 @@ module.exports = async (request, response) => {
     response.setHeader('Access-Control-Allow-Origin', '*')
     response.setHeader('Access-Control-Allow-Methods', 'GET, POST')
     send(response, 200, method === 'POST' ? updateStore(data) : readFromStore(data))
+  } else if (pathname !== '/') {
+    data.key = pathname.replace('/', '')
+    response.setHeader('Access-Control-Allow-Origin', '*')
+    response.setHeader('Access-Control-Allow-Methods', 'GET, POST')
+    send(response, 200, method === 'POST' ? updateStore(data) : readFromStore(data))
   } else {
     const readme = readFileSync('./README.md', 'utf-8')
     const html = marked(readme)
