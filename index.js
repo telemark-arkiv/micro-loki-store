@@ -53,6 +53,8 @@ module.exports = async (request, response) => {
   const data = method === 'POST' ? await json(request) : query
 
   if (pathname === '/store') {
+    response.setHeader('Access-Control-Allow-Origin', '*')
+    response.setHeader('Access-Control-Allow-Methods', 'GET, POST')
     send(response, 200, method === 'POST' ? updateStore(data) : readFromStore(data))
   } else {
     const readme = readFileSync('./README.md', 'utf-8')
