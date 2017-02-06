@@ -3,6 +3,8 @@
 
 # micro-loki-store
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/telemark/micro-loki-store.svg)](https://greenkeeper.io/)
+
 Microservice for storing content with loki
 
 ## API
