@@ -52,15 +52,14 @@ module.exports = async (request, response) => {
   const {pathname, query} = await parse(request.url, true)
   const method = request.method
   let data = method === 'POST' ? await json(request) : query
+  response.setHeader('Access-Control-Allow-Origin', '*')
+  response.setHeader('Access-Control-Allow-Methods', 'GET, POST')
+  ressponse.setHeader('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With')
 
   if (method === 'POST') {
-    response.setHeader('Access-Control-Allow-Origin', '*')
-    response.setHeader('Access-Control-Allow-Methods', 'GET, POST')
     send(response, 200, updateStore(data))
   } else if (pathname !== '/') {
     data.key = pathname.replace('/', '')
-    response.setHeader('Access-Control-Allow-Origin', '*')
-    response.setHeader('Access-Control-Allow-Methods', 'GET, POST')
     send(response, 200, readFromStore(data))
   } else {
     const readme = readFileSync('./README.md', 'utf-8')
