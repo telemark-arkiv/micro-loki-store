@@ -1,9 +1,8 @@
 [![Build Status](https://travis-ci.org/telemark/micro-loki-store.svg?branch=master)](https://travis-ci.org/telemark/micro-loki-store)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+[![Greenkeeper badge](https://badges.greenkeeper.io/telemark/micro-loki-store.svg)](https://greenkeeper.io/)
 
 # micro-loki-store
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/telemark/micro-loki-store.svg)](https://greenkeeper.io/)
 
 Microservice for storing content with loki
 

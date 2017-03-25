@@ -53,7 +53,7 @@ module.exports = async (request, response) => {
   const method = request.method
   let data = method === 'POST' ? await json(request) : query
   response.setHeader('Access-Control-Allow-Origin', '*')
-  response.setHeader('Access-Control-Allow-Methods', 'GET, POST')
+  response.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS, POST')
   response.setHeader('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With')
 
   if (method === 'POST') {
