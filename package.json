@@ -1,7 +1,7 @@
 {
   "name": "micro-loki-store",
   "description": "Mapping of shortcuts",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "license": "MIT",
   "author": {
     "name": "Geir Gåsodden",
@@ -10,7 +10,7 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">=7.5.0"
+    "node": ">=7.7.3"
   },
   "scripts": {
     "test": "standard && nsp check && tap --reporter=spec test/**/*.js",
@@ -19,9 +19,8 @@
     "coveralls": "tap --cov --coverage-report=lcov test/**/*.js && cat coverage/lcov.info | coveralls",
     "setup": "npm install",
     "standard-fix": "standard --fix",
-    "start": "NODE_ENV=production micro -p 8080",
-    "dev": "micro -p 3000",
-    "now-deploy": "npm test && now --npm --alias"
+    "start": "micro",
+    "now-deploy": "npm test && now --npm && now alias"
   },
   "keywords": [
     "microservice",
@@ -37,13 +36,15 @@
   "bugs": {
     "url": "https://github.com/telemark/micro-loki-store/issues"
   },
+  "homepage": "https://github.com/telemark/micro-loki-store",
   "now": {
-    "aliases": [
+    "alias": [
       "loki.storage.mikrotjeneste.no"
     ],
     "env": {
       "NODE_ENV": "production"
-    }
+    },
+    "type": "npm"
   },
   "devDependencies": {
     "coveralls": "2.12.0",
