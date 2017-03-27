@@ -1,7 +1,7 @@
 {
   "name": "micro-loki-store",
   "description": "Microservice for storing content with loki",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "license": "MIT",
   "author": {
     "name": "Geir Gåsodden",
@@ -10,7 +10,7 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">=7.7.3"
+    "node": ">=7.7.4"
   },
   "scripts": {
     "test": "standard && nsp check && tap --reporter=spec test/**/*.js",
