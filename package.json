@@ -1,7 +1,7 @@
 {
   "name": "micro-loki-store",
   "description": "Microservice for storing content with loki",
-  "version": "2.0.15",
+  "version": "2.0.16",
   "license": "MIT",
   "author": {
     "name": "Geir Gåsodden",
