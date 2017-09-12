@@ -55,6 +55,6 @@
   "dependencies": {
     "lokijs": "1.4.3",
     "marked": "0.3.6",
-    "micro": "8.0.4"
+    "micro": "9.0.0"
   }
 }
