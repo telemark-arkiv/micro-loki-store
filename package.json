@@ -51,7 +51,7 @@
     "coveralls": "3.0.0",
     "nsp": "3.2.1",
     "standard": "11.0.0",
-    "tap": "10.3.2"
+    "tap": "11.1.1"
   },
   "dependencies": {
     "lokijs": "1.5.3",
