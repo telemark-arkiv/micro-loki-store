@@ -1,5 +1,5 @@
 # Setting the base to nodejs 7.7.4
-FROM node:7.7.4-alpine
+FROM node:6.14.3-alpine
 
 # Maintainer
 MAINTAINER Geir Gåsodden
