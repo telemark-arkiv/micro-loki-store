@@ -54,7 +54,7 @@
     "tap": "12.1.1"
   },
   "dependencies": {
-    "lokijs": "1.5.5",
+    "lokijs": "1.5.6",
     "marked": "0.6.0",
     "micro": "9.3.3"
   }
