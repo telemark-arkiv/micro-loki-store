@@ -37,16 +37,7 @@
   "bugs": {
     "url": "https://github.com/telemark/micro-loki-store/issues"
   },
-  "homepage": "https://github.com/telemark/micro-loki-store",
-  "now": {
-    "alias": [
-      "loki.storage.mikrotjeneste.no"
-    ],
-    "env": {
-      "NODE_ENV": "production"
-    },
-    "type": "npm"
-  },
+  "homepage": "https://github.com/telemark/micro-loki-store#README",
   "devDependencies": {
     "coveralls": "3.0.2",
     "standard": "12.0.1",

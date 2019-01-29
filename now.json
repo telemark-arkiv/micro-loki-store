@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "alias": [
+    "loki.storage.mikrotjeneste.no"
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "type": "docker"
+}
