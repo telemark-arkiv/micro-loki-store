@@ -1,7 +1,5 @@
-'use strict'
-
 const os = require('os')
-const readFileSync = require('fs').readFileSync
+const { readFile } = require('fs').promises
 const Loki = require('lokijs')
 const marked = require('marked')
 const { parse } = require('url')
@@ -62,7 +60,7 @@ module.exports = async (request, response) => {
     data.key = pathname.replace('/', '')
     send(response, 200, readFromStore(data))
   } else {
-    const readme = readFileSync('./README.md', 'utf-8')
+    const readme = await readFile(`${__dirname}/README.md`, 'utf-8')
     const html = marked(readme)
     send(response, 200, html)
   }
