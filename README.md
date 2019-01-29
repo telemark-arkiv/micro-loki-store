@@ -1,6 +1,5 @@
 [![Build Status](https://travis-ci.org/telemark/micro-loki-store.svg?branch=master)](https://travis-ci.org/telemark/micro-loki-store)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
-[![Greenkeeper badge](https://badges.greenkeeper.io/telemark/micro-loki-store.svg)](https://greenkeeper.io/)
 
 # micro-loki-store
 
@@ -47,5 +46,3 @@ $ curl -d '{"key":"info", "type":"content", "data":{"user": "gasg", "type": "new
 ## License
 
 [MIT](LICENSE)
-
-![alt text](https://robots.kebabstudios.party/micro-loki-store.png "Robohash image of micro-loki-store")
