@@ -25,7 +25,7 @@ function updateStore (data) {
   const key = data.key
   const type = data.type
   const value = data.data
-  const content = store.findOne({key: key})
+  const content = store.findOne({ key: key })
 
   if (!content) {
     var payload = {
@@ -43,13 +43,13 @@ function updateStore (data) {
 
 function readFromStore (data) {
   const key = data.key
-  const content = store.findOne({key: key})
+  const content = store.findOne({ key: key })
 
   return content || []
 }
 
 module.exports = async (request, response) => {
-  const {pathname, query} = await parse(request.url, true)
+  const { pathname, query } = await parse(request.url, true)
   const method = request.method
   let data = method === 'POST' ? await json(request) : query
   response.setHeader('Access-Control-Allow-Origin', '*')
